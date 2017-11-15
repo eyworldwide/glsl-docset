@@ -1,0 +1,58 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="exponential-functions">EXPONENTIAL FUNCTIONS</h1>
+<h2 id="exponentiation">Exponentiation</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">pow</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">pow</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">pow</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">pow</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)</code></pre>
+<p>The <strong>power</strong> function returns x raised to the power of y. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<h2 id="exponential-function">Exponential function</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">exp</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">exp</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">exp</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">exp</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>exp</strong> function returns the constant e raised to the power of x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="natural-logarithm">Natural logarithm</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">log</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">log</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">log</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">log</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>log</strong> function returns the power to which the constant e has to be raised to produce x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="exponential-function-base-2">Exponential function (base 2)</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">exp2</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">exp2</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">exp2</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">exp2</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>exp2</strong> function returns 2 raised to the power of x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="logarithm-base-2">Logarithm (base 2)</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">log2</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">log2</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">log2</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">log2</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>log2</strong> function returns the power to which 2 has to be raised to produce x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="square-root">Square root</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">sqrt</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">sqrt</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">sqrt</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">sqrt</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>sqrt</strong> function returns the square root of x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="inverse-square-root">Inverse square root</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">inversesqrt</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">inversesqrt</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">inversesqrt</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">inversesqrt</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>inversesqrt</strong> function returns the inverse square root of x, i.e. the reciprocal of the square root. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="angle--trigonometry-functions">ANGLE &amp; TRIGONOMETRY FUNCTIONS</h1>
+<h2 id="radians">Radians</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">radians</span>(<span class="hljs-type">float</span> <span class="hljs-built_in">degrees</span>)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">radians</span>(<span class="hljs-type">vec2</span> <span class="hljs-built_in">degrees</span>)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">radians</span>(<span class="hljs-type">vec3</span> <span class="hljs-built_in">degrees</span>)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">radians</span>(<span class="hljs-type">vec4</span> <span class="hljs-built_in">degrees</span>)</code></pre>
+<p>The <strong>radians</strong> function converts degrees to radians. The input parameter can be a floating scalar or a float vector. In case of a float vector all components are converted from degrees to radians separately.</p>
+<h2 id="degrees">Degrees</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">degrees</span>(<span class="hljs-type">float</span> <span class="hljs-built_in">radians</span>)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">degrees</span>(<span class="hljs-type">vec2</span> <span class="hljs-built_in">radians</span>)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">degrees</span>(<span class="hljs-type">vec3</span> <span class="hljs-built_in">radians</span>)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">degrees</span>(<span class="hljs-type">vec4</span> <span class="hljs-built_in">radians</span>)</code></pre>
+<p>The <strong>degrees</strong> function converts radians to degrees. The input parameter can be a floating scalar or a float vector. In case of a float vector every component is converted from radians to degrees separately.</p>
+<h2 id="sine">Sine</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">sin</span>(<span class="hljs-type">float</span> angle)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">sin</span>(<span class="hljs-type">vec2</span> angle)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">sin</span>(<span class="hljs-type">vec3</span> angle)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">sin</span>(<span class="hljs-type">vec4</span> angle)</code></pre>
+<p>The <strong>sin</strong> function returns the sine of an angle in radians. The input parameter can be a floating scalar or a float vector. In case of a float vector the sine is calculated separately for every component.</p>
+<h2 id="cosine">Cosine</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">cos</span>(<span class="hljs-type">float</span> angle)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">cos</span>(<span class="hljs-type">vec2</span> angle)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">cos</span>(<span class="hljs-type">vec3</span> angle)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">cos</span>(<span class="hljs-type">vec4</span> angle)</code></pre>
+<p>The <strong>cos</strong> function returns the cosine of an angle in radians. The input parameter can be a floating scalar or a float vector. In case of a float vector the cosine is calculated separately for every component.</p>
+<h2 id="tangent">Tangent</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">tan</span>(<span class="hljs-type">float</span> angle)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">tan</span>(<span class="hljs-type">vec2</span> angle)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">tan</span>(<span class="hljs-type">vec3</span> angle)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">tan</span>(<span class="hljs-type">vec4</span> angle)</code></pre>
+<p>The <strong>tan</strong> function returns the tangent of an angle in radians. The input parameter can be a floating scalar or a float vector. In case of a float vector the tangent is calculated separately for every component.</p>
+<h2 id="arcsine">Arcsine</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">asin</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">asin</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">asin</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">asin</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>asin</strong> function returns the arcsine of an angle in radians. It is the inverse function of sine. The input parameter can be a floating scalar or a float vector. In case of a float vector the arcsine is calculated separately for every component.</p>
+<h2 id="arccosine">Arccosine</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">acos</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">acos</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">acos</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">acos</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>acos</strong> function returns the arccosine of an angle in radians. It is the inverse function of cosine. The input parameter can be a floating scalar or a float vector. In case of a float vector the arccosine is calculated separately for every component.</p>
+<h2 id="arctangent">Arctangent</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">float</span> y_over_x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">vec2</span> y_over_x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">vec3</span> y_over_x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">vec4</span> y_over_x)</code></pre>
+<p>The <strong>atan</strong> function returns the arctangent of an angle in radians. It is the inverse function of tangent. The input parameter can be a floating scalar or a float vector. In case of a float vector the arctangent is calculated separately for every component.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">float</span> y, <span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">vec2</span> y, <span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">vec3</span> y, <span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">atan</span>(<span class="hljs-type">vec4</span> y, <span class="hljs-type">vec4</span> x)</code></pre>
+<p>There is also a two-argument variation of the <strong>atan</strong> function (in other programming languages often called atan2). For a point with Cartesian coordinates (x, y) the function returns the angle θ of the same point with polar coordinates (r, θ).</p>
+	</div>
+</body>
+</html>

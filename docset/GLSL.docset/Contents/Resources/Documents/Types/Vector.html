@@ -1,0 +1,145 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="vector-types">VECTOR TYPES</h1>
+<h2 id="2-component-boolean-vector">2-component boolean vector</h2>
+<pre><code><span class="hljs-type">bvec2</span> aBvec2 = <span class="hljs-type">bvec2</span>(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-type">bvec2</span> bBvec2 = <span class="hljs-type">bvec2</span>(<span class="hljs-literal">true</span>);
+
+<span class="hljs-type">bvec2</span> cBvec2 = <span class="hljs-type">bvec2</span>(aBvec3);
+<span class="hljs-type">bvec2</span> dBvec2 = <span class="hljs-type">bvec2</span>(aBvec3.x, aBvec3.y);</code></pre>
+<p>The data type <strong>bvec2</strong> is used for boolean vectors with two components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a vector of higher dimension. The respective values are used to initialize the components (the second and third example are equivalent).</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="3-component-boolean-vector">3-component boolean vector</h2>
+<pre><code><span class="hljs-type">vec3</span> aBvec3 = <span class="hljs-type">bvec3</span>(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-type">vec3</span> bBvec3 = <span class="hljs-type">bvec3</span>(<span class="hljs-literal">true</span>);
+
+<span class="hljs-type">vec3</span> cBvec3 = <span class="hljs-type">bvec3</span>(aBvec4);
+<span class="hljs-type">vec3</span> dBvec3 = <span class="hljs-type">bvec3</span>(aBvec4.x, aBvec4.y, aBvec4.z);
+
+<span class="hljs-type">vec3</span> eBvec3 = <span class="hljs-type">bvec3</span>(aBvec2, aBool);
+<span class="hljs-type">vec3</span> fBvec3 = <span class="hljs-type">bvec3</span>(aBvec2.x, aBvec2.y, aBool);</code></pre>
+<p>The data type <strong>bvec3</strong> is used for boolean vectors with three components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a vector of higher dimension. The respective values are used to initialize the components (the second and third example are equivalent).</li>
+<li>Components are specified by providing a combination of vectors and/or scalars. The respective values are used to initialize the vector (the fifth and sixth example are equivalent). The arguments of the constructor must have at least as many components as the vector that is initialized.</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="4-component-boolean-vector">4-component boolean vector</h2>
+<pre><code><span class="hljs-type">vec4</span> aBvec4 = <span class="hljs-type">bvec4</span>(<span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>, <span class="hljs-literal">true</span>);
+<span class="hljs-type">vec4</span> bBvec4 = <span class="hljs-type">bvec4</span>(<span class="hljs-literal">true</span>);
+
+<span class="hljs-type">vec4</span> cBvec4 = <span class="hljs-type">bvec4</span>(aBvec2, aBool, aBvec3);
+<span class="hljs-type">vec4</span> dBvec4 = <span class="hljs-type">bvec4</span>(aBvec2.x, aBvec2.y, aBool, aBvec3.x);</code></pre>
+<p>The data type <strong>bvec4</strong> is used for boolean vectors with four components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a combination of vectors and scalars. The respective values are used to initialize the components (the third and fourth example are equivalent). The arguments of the constructor must have at least as many components as the vector that is initialized.</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="2-component-integer-vector">2-component integer vector</h2>
+<pre><code><span class="hljs-keyword">bvec2 </span>aIvec2 = ivec2(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>)<span class="hljs-comment">;</span>
+<span class="hljs-keyword">bvec2 </span><span class="hljs-keyword">bIvec2 </span>= ivec2(<span class="hljs-number">1</span>)<span class="hljs-comment">;</span>
+
+<span class="hljs-keyword">bvec2 </span>cIvec2 = ivec2(aIvec3)<span class="hljs-comment">;</span>
+<span class="hljs-keyword">bvec2 </span><span class="hljs-keyword">dIvec2 </span>= ivec2(aIvec3.x, aIvec3.y)<span class="hljs-comment">;</span></code></pre>
+<p>The data type <strong>ivec2</strong> is used for integer vectors with two components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a vector of higher dimension. The respective values are used to initialize the components (the second and third example are equivalent).</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="3-component-integer-vector">3-component integer vector</h2>
+<pre><code><span class="hljs-type">vec3</span> aIvec3 = <span class="hljs-type">ivec3</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+<span class="hljs-type">vec3</span> bIvec3 = <span class="hljs-type">ivec3</span>(<span class="hljs-number">1</span>);
+
+<span class="hljs-type">vec3</span> cIvec3 = <span class="hljs-type">ivec3</span>(aIvec4);
+<span class="hljs-type">vec3</span> dIvec3 = <span class="hljs-type">ivec3</span>(aIvec4.x, aIvec4.y, aIvec4.z);
+
+<span class="hljs-type">vec3</span> eIvec3 = <span class="hljs-type">ivec3</span>(aIvec2, aInt);
+<span class="hljs-type">vec3</span> fIvec3 = <span class="hljs-type">ivec3</span>(aIvec2.x, aIvec2.y, aInt);</code></pre>
+<p>The data type <strong>ivec3</strong> is used for integer vectors with three components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a vector of higher dimension. The respective values are used to initialize the components (the second and third example are equivalent).</li>
+<li>Components are specified by providing a combination of vectors and/or scalars. The respective values are used to initialize the vector (the fifth and sixth example are equivalent). The arguments of the constructor must have at least as many components as the vector that is initialized.</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="4-component-integer-vector">4-component integer vector</h2>
+<pre><code><span class="hljs-type">vec4</span> aIvec4 = <span class="hljs-type">ivec4</span>(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+<span class="hljs-type">vec4</span> bIvec4 = <span class="hljs-type">ivec4</span>(<span class="hljs-number">1</span>);
+
+<span class="hljs-type">vec4</span> cIvec4 = <span class="hljs-type">ivec4</span>(aIvec2, aInteger, aIvec3);
+<span class="hljs-type">vec4</span> dIvec4 = <span class="hljs-type">ivec4</span>(aIvec2.x, aIvec2.y, aInt, aIvec3.x);</code></pre>
+<p>The data type <strong>ivec4</strong> is used for integer vectors with four components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a combination of vectors and scalars. The respective values are used to initialize the components (the third and fourth example are equivalent). The arguments of the constructor must have at least as many components as the vector that is initialized.</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="2-component-floating-point-vector">2-component floating point vector</h2>
+<pre><code><span class="hljs-type">vec2</span> aVec2 = <span class="hljs-type">vec2</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>);
+<span class="hljs-type">vec2</span> bVec2 = <span class="hljs-type">vec2</span>(<span class="hljs-number">1.0</span>);
+
+<span class="hljs-type">vec2</span> cVec2 = <span class="hljs-type">vec2</span>(aVec3);
+<span class="hljs-type">vec2</span> dVec2 = <span class="hljs-type">vec2</span>(aVec3.x, aVec3.y);</code></pre>
+<p>The data type <strong>vec2</strong> is used for floating point vectors with two components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a vector of higher dimension. The respective values are used to initialize the components (the second and third example are equivalent).</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="3-component-floating-point-vector">3-component floating point vector</h2>
+<pre><code><span class="hljs-type">vec3</span> aVec3 = <span class="hljs-type">vec3</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>);
+<span class="hljs-type">vec3</span> bVec3 = <span class="hljs-type">vec3</span>(<span class="hljs-number">1.0</span>);
+
+<span class="hljs-type">vec3</span> cVec3 = <span class="hljs-type">vec3</span>(aVec4);
+<span class="hljs-type">vec3</span> dVec3 = <span class="hljs-type">vec3</span>(aVec4.x, aVec4.y, aVec4.z);
+
+<span class="hljs-type">vec3</span> eVec3 = <span class="hljs-type">vec3</span>(aVec2, aFloat);
+<span class="hljs-type">vec3</span> fVec3 = <span class="hljs-type">vec3</span>(aVec2.x, aVec2.y, aFloat);</code></pre>
+<p>The data type <strong>vec3</strong> is used for floating point vectors with three components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a vector of higher dimension. The respective values are used to initialize the components (the second and third example are equivalent).</li>
+<li>Components are specified by providing a combination of vectors and/or scalars. The respective values are used to initialize the vector (the fifth and sixth example are equivalent). The arguments of the constructor must have at least as many components as the vector that is initialized.</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+<h2 id="4-component-floating-point-vector">4-component floating point vector</h2>
+<pre><code><span class="hljs-type">vec4</span> aVec4 = <span class="hljs-type">vec4</span>(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>);
+<span class="hljs-type">vec4</span> bVec4 = <span class="hljs-type">vec4</span>(<span class="hljs-number">1.0</span>);
+
+<span class="hljs-type">vec4</span> cVec4 = <span class="hljs-type">vec4</span>(aVec2, aFloat, aVec3);
+<span class="hljs-type">vec4</span> dVec4 = <span class="hljs-type">vec4</span>(aVec2.x, aVec2.y, aFloat, aVec3.x);</code></pre>
+<p>The data type <strong>vec4</strong> is used for floating point vectors with four components. There are several ways to initialize a vector:</p>
+<ul>
+<li>Components are specified by providing a scalar value for each component (first example).</li>
+<li>Components are specified by providing one scalar value. This value is used for all components (the second example is equivalent to the first).</li>
+<li>Components are specified by providing a combination of vectors and scalars. The respective values are used to initialize the components (the third and fourth example are equivalent). The arguments of the constructor must have at least as many components as the vector that is initialized.</li>
+</ul>
+<p>Side note: The vector constructors can be used to cast between different vector types since type conversions are done automatically for each component.</p>
+	</div>
+</body>
+</html>

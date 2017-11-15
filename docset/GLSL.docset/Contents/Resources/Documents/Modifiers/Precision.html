@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="precision-qualifiers">PRECISION QUALIFIERS</h1>
+<h2 id="high-precision">High precision</h2>
+<pre><code><span class="hljs-attribute">highp</span></code></pre>
+<p>The qualifier <strong>highp</strong> is used to specify the highest available precision for a variable. The variable has to be an integer or a floating point scalar or a vector or matrix based on these types. The precision qualifier precedes the type in the variable declaration.</p>
+<p>In the vertex shader the use of a precision qualifier is optional. If no qualifier is given all variables are of highest precision. In the fragment shader a precision qualifier has to be used when declaring a variable unless a default precision has been defined for the specific type.</p>
+<pre><code><span class="hljs-keyword">uniform</span> <span class="hljs-keyword">highp</span> <span class="hljs-type">vec3</span> lightDirection;</code></pre>
+<p>The actual range corresponding to a precision qualifier is dependent on the specific OpenGL ES implementation. Using a lower precision might have a positive effect on performance (frame rates) and power efficiency but might also cause a loss in rendering quality. The appropriate trade-off can only be determined by testing different precision configurations.</p>
+<h2 id="medium-precision">Medium precision</h2>
+<pre><code><span class="hljs-attribute">mediump</span></code></pre>
+<p>The qualifier <strong>mediump</strong> is used to specify a precision between the highest and lowest available precision for a variable. The variable has to be an integer or a floating point scalar or a vector or matrix based on these types. The precision qualifier precedes the type in the variable declaration.</p>
+<p>In the vertex shader the use of a precision qualifier is optional. If no qualifier is given all variables are of highest precision. In the fragment shader a precision qualifier has to be used when declaring a variable unless a default precision has been defined for the specific type.</p>
+<pre><code><span class="hljs-keyword">varying</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">vec2</span> textureCoordinate;</code></pre>
+<p>The actual range corresponding to a precision qualifier is dependent on the specific OpenGL ES implementation. Using a lower precision might have a positive effect on performance (frame rates) and power efficiency but might also cause a loss in rendering quality. The appropriate trade-off can only be determined by testing different precision configurations.</p>
+<h2 id="low-precision">Low precision</h2>
+<pre><code><span class="hljs-attribute">lowp</span></code></pre>
+<p>The qualifier <strong>lowp</strong> is used to specify the lowest available precision for a variable. The variable has to be an integer or a floating point scalar or a vector or matrix based on these types. The precision qualifier precedes the type in the variable declaration.</p>
+<p>In the vertex shader the use of a precision qualifier is optional. If no qualifier is given all variables are of highest precision. In the fragment shader a precision qualifier has to be used when declaring a variable unless a default precision has been defined for the specific type.</p>
+<pre><code><span class="hljs-keyword">varying</span> <span class="hljs-keyword">lowp</span> <span class="hljs-type">vec4</span> colorVarying;</code></pre>
+<p>The actual range corresponding to a precision qualifier is dependent on the specific OpenGL ES implementation. Using a lower precision might have a positive effect on performance (frame rates) and power efficiency but might also cause a loss in rendering quality. The appropriate trade-off can only be determined by testing different precision configurations.</p>
+<h2 id="default-precision">Default precision</h2>
+<pre><code><span class="hljs-attribute">precision</span></code></pre>
+<p>The keyword <strong>precision</strong> is used in conjunction with a precision qualifier and a data type to specify the default precision for that data type. The type has to be an integer or a floating point scalar or a vector or matrix based on these types.</p>
+<p>In the vertex shader all variables are of highest precision by default. The default can be changed defining another default precision. In the fragment shader a precision qualifier has to be used when declaring a variable unless a default precision has been defined for the specific type.</p>
+<pre><code><span class="hljs-keyword">precision</span> <span class="hljs-keyword">highp</span> <span class="hljs-type">float</span>;</code></pre>
+<p>The actual range corresponding to a precision qualifier is dependent on the specific OpenGL ES implementation. Using a lower precision might have a positive effect on performance (frame rates) and power efficiency but might also cause a loss in rendering quality. The appropriate trade-off can only be determined by testing different precision configurations.</p>
+	</div>
+</body>
+</html>

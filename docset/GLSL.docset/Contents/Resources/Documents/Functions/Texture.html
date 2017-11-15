@@ -1,0 +1,28 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="texture-lookup-functions">TEXTURE LOOKUP FUNCTIONS</h1>
+<h2 id="2d-texture-lookup">2D texture lookup</h2>
+<pre><code><span class="hljs-type">vec4</span> <span class="hljs-built_in">texture2D</span>(<span class="hljs-type">sampler2D</span> sampler, <span class="hljs-type">vec2</span> coord)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">texture2D</span>(<span class="hljs-type">sampler2D</span> sampler, <span class="hljs-type">vec2</span> coord, <span class="hljs-type">float</span> bias)</code></pre>
+<p>The <strong>texture2D</strong> function returns a texel, i.e. the (color) value of the texture for the given coordinates. The function has one input parameter of the type sampler2D and one input parameter of the type vec2 : sampler, the uniform the texture is bound to, and coord, the 2-dimensional coordinates of the texel to look up.</p>
+<p>There is an optional third input parameter of the type float: bias. After calculating the appropriate level of detail for a texture with mipmaps the bias is added before the actual texture lookup operation is executed.</p>
+<p>Side note: On iOS devices texture lookup functionality is only available in the fragment shader.</p>
+<h2 id="cubemap-texture-lookup">Cubemap texture lookup</h2>
+<pre><code><span class="hljs-type">vec4</span> <span class="hljs-built_in">textureCube</span>(<span class="hljs-type">samplerCube</span> sampler, <span class="hljs-type">vec3</span> coord)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">textureCube</span>(<span class="hljs-type">samplerCube</span> sampler, <span class="hljs-type">vec3</span> coord, <span class="hljs-type">float</span> bias)</code></pre>
+<p>The <strong>textureCube</strong> function returns a texel, i.e. the (color) value of the texture for the given coordinates. The function has one input parameter of the type samplerCube and one input parameter of the type vec3 : sampler, the uniform the texture is bound to, and coord, the 3-dimensional coordinates of the texel to look up.</p>
+<p>There is an optional third input parameter of the type float: bias. After calculating the appropriate level of detail for a texture with mipmaps the bias is added before the actual texture lookup operation is executed.</p>
+<p>Side note: On iOS devices texture lookup functionality is only available in the fragment shader.</p>
+	</div>
+</body>
+</html>

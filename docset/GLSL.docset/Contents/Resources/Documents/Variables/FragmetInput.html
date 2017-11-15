@@ -1,0 +1,28 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="special-input-variables-of-the-fragment-shader">SPECIAL INPUT VARIABLES OF THE FRAGMENT SHADER</h1>
+<h2 id="fragment-coordinates">Fragment coordinates</h2>
+<pre><code><span class="hljs-keyword">mediump</span> <span class="hljs-type">vec4</span> <span class="hljs-built_in">gl_FragCoord</span>;</code></pre>
+<p>The built-in variable <strong>gl_FragCoord</strong> is used by the OpenGL ES 2.0 pipeline to hand over the coordinates of the fragment to the fragment shader. The variable is read-only and the value is assigned by the OpenGL ES 2.0 pipeline.</p>
+<p>The values of the fragment coordinate vector are given in the window coordinate system.</p>
+<h2 id="fragment-orientation">Fragment orientation</h2>
+<pre><code><span class="hljs-type">bool</span> <span class="hljs-built_in">gl_FrontFacing</span>;</code></pre>
+<p>The built-in variable <strong>gl_FrontFacing</strong> is used by the OpenGL ES 2.0 pipeline to hand over the information to the fragment shader if the fragment is part of a front-facing primitive (triangle). The variable is read-only and the value is assigned by the OpenGL ES 2.0 pipeline.</p>
+<p>The front-facing variable has a boolean value.</p>
+<h2 id="point-coordinates">Point coordinates</h2>
+<pre><code><span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_PointCoord</span>;</code></pre>
+<p>The built-in variable <strong>gl_PointCoord</strong> is used by the OpenGL ES 2.0 pipeline to hand over the coordinates of a point sprite to the fragment shader. The variable is read-only and the value is calculated and assigned by the OpenGL ES 2.0 pipeline based on the position and radius of the point sprite..</p>
+<p>Side note: A value for this variable is provided by the OpenGL ES 2.0 pipeline only if the rendered primitives are points.</p>
+	</div>
+</body>
+</html>

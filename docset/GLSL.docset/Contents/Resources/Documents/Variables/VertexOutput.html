@@ -1,0 +1,26 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="special-output-variables-of-the-vertex-shader">SPECIAL OUTPUT VARIABLES OF THE VERTEX SHADER</h1>
+<h2 id="vertex-position">Vertex position</h2>
+<pre><code><span class="hljs-keyword">highp</span> <span class="hljs-type">vec4</span> <span class="hljs-built_in">gl_Position</span>;</code></pre>
+<p>The built-in variable <strong>gl_Position</strong> is used by the vertex shader to hand over the transformed vertex position to the OpenGL ES 2.0 pipeline. The variable is declared as shown above and can be used in the vertex shader for an assignment without prior declaration.</p>
+<p>The values of the position vector are interpreted in clip coordinate space. The vertex shader is responsible to execute all vertex manipulations, e.g. the transformation from object coordinates to clip coordinates.</p>
+<p>The assignment of values to this variable is mandatory for the vertex shader.</p>
+<h2 id="point-size">Point size</h2>
+<pre><code><span class="hljs-keyword">mediump</span> <span class="hljs-type">float</span> <span class="hljs-built_in">gl_PointSize</span>;</code></pre>
+<p>The built-in variable <strong>gl_PointSize</strong> is used by the vertex shader to hand over the point size of a vertex to the OpenGL ES 2.0 pipeline. The variable is declared as shown above and can be used in the vertex shader for an assignment without prior declaration.</p>
+<p>The value of the the point size is interpreted as the radius in pixels of the point sprite. The actual drawing geometry is a quad (a rectangular primitive) that is derived from the position and the radius of the point sprite.</p>
+<p>Side note: The value assigned to this variable is only taken into account by the OpenGL ES 2.0 pipeline if the rendered primitives are points.</p>
+	</div>
+</body>
+</html>

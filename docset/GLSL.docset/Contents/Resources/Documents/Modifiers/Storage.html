@@ -1,0 +1,34 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="storage-qualifiers">STORAGE QUALIFIERS</h1>
+<h2 id="constant">Constant</h2>
+<pre><code><span class="hljs-keyword">const</span></code></pre>
+<p>The qualifier <strong>const</strong> is used for variables that are compile-time constants or for function parameters that are read-only.</p>
+<h2 id="attribute">Attribute</h2>
+<pre><code><span class="hljs-keyword">attribute</span></code></pre>
+<p>The qualifier <strong>attribute</strong> is used to declare variables that are shared between a vertex shader and the OpenGL ES environment.</p>
+<p>Since the vertex shader is executed one time for each vertex attributes are used to specify per vertex data. They typically provide data such as the object space position, the normal direction and the texture coordinates of a vertex. Attributes are read-only variables, i.e. their value can not be changed in the vertex shader.</p>
+<p>Side note: Since an attribute is never initialized in the shader it has to be loaded with data by the application executing the shader.</p>
+<h2 id="uniform">Uniform</h2>
+<pre><code><span class="hljs-attribute">uniform</span></code></pre>
+<p>The qualifier <strong>uniform</strong> is used to declare variables that are shared between a shader and the OpenGL ES environment.</p>
+<p>Uniforms can be used in the vertex shader and the fragment shader and they must have global scope. The same uniform variable can be used in the vertex and the fragment shader, but since both shaders share the same name space the declaration has to be identical. Uniforms are used to specify properties of the object that is rendered. Examples are the projection matrix, the light position or the material color of the object. Uniforms are read-only variables, i.e. their value can not be changed in the shader.</p>
+<p>Side note: Since a uniform is never initialized in the shader it has to be loaded with data by the application executing the shader.</p>
+<h2 id="varying">Varying</h2>
+<pre><code><span class="hljs-attribute">varying</span></code></pre>
+<p>The qualifier <strong>varying</strong> is used to declare variables that are shared between the vertex shader and the fragment shader.</p>
+<p>Varying are used for information that is calculated in the vertex shader and should be handed over to the fragment shader. Both shaders have to declare the varying and the declarations must be identical. The vertex shader initializes the varying for each vertex. After that the per vertex data of the varying is interpolated during rasterization before being handed over to the fragment shader.</p>
+<p>The varying qualifier can only be used with floating point scalar, floating point vectors and (floating point) matrices as well as arrays containing these types.</p>
+	</div>
+</body>
+</html>

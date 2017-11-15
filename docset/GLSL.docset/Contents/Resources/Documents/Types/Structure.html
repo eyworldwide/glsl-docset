@@ -1,0 +1,51 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="structures-and-arrays">STRUCTURES AND ARRAYS</h1>
+<h2 id="structure">Structure</h2>
+<pre><code>struct matStruct {
+    vec4 ambientColor; 
+    vec4 diffuseColor;
+    vec4 specularColor;
+    <span class="hljs-type">float</span> specularExponent;
+} newMaterial;
+
+newMaterial = matStruct(vec4(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">0.1</span>, <span class="hljs-number">1.0</span>),
+                        vec4(<span class="hljs-number">1.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-number">1.0</span>),
+                        vec4(<span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1.0</span>),
+                        <span class="hljs-number">50.0</span>);</code></pre>
+<p>The data type <strong>struct</strong> is used to declare custom data structures based on standard types. A constructor for the structure with the same name is created automatically. The declaration of a variable (in this case "newMaterial") is optional.</p>
+<p>Side note: There has to be an exact correspondence of the arguments of the constructor and the elements of the structure.</p>
+<pre><code>vec4 ambientColor = <span class="hljs-keyword">new</span><span class="hljs-type">Material</span>.ambientColor; 
+vec4 diffuseColor = <span class="hljs-keyword">new</span><span class="hljs-type">Material</span>.diffuseColor;
+vec4 specularColor = <span class="hljs-keyword">new</span><span class="hljs-type">Material</span>.specularColor;
+float specularExponent = <span class="hljs-keyword">new</span><span class="hljs-type">Material</span>.specularExponent;</code></pre>
+<p>The elements of a structure can be accessed using the dot-operator.</p>
+<h2 id="array">Array</h2>
+<pre><code>int <span class="hljs-keyword">new</span><span class="hljs-type">IntArray</span>[<span class="hljs-number">9</span>];
+vec3 <span class="hljs-keyword">new</span><span class="hljs-type">Vec3Array</span>[<span class="hljs-number">3</span>];</code></pre>
+<p>The data type <strong>array</strong> is used to declare custom arrays based on standard types. The following restrictions apply for arrays:</p>
+<ul>
+<li>An array can contain all basic data types as well as structures.</li>
+<li>An array can not be initialized at the time when it is declared.</li>
+<li>The elements of an array have to be initialized one after the other.</li>
+</ul>
+<p>The elements of an array are initialized and accessed using the index of the respective element:</p>
+<pre><code><span class="hljs-keyword">new</span><span class="hljs-type">IntArray</span>[<span class="hljs-number">0</span>] = <span class="hljs-number">5</span>;
+<span class="hljs-keyword">new</span><span class="hljs-type">Vec3Array</span>[<span class="hljs-number">1</span>] = vec3(<span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>, <span class="hljs-number">1.0</span>);
+
+int <span class="hljs-keyword">new</span><span class="hljs-type">Int</span> = <span class="hljs-keyword">new</span><span class="hljs-type">IntArray</span>[<span class="hljs-number">0</span>];
+vec3 <span class="hljs-keyword">new</span><span class="hljs-type">Vec3</span> = <span class="hljs-keyword">new</span><span class="hljs-type">Vec3Array</span>[<span class="hljs-number">1</span>];</code></pre>
+<p>Side note: On iOS devices the elements of an array can not be accessed using a variable index, i.e. the value of the index has to be a compile time constant.</p>
+	</div>
+</body>
+</html>

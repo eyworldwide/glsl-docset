@@ -1,0 +1,37 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="parameter-qualifiers">PARAMETER QUALIFIERS</h1>
+<h2 id="input-qualifier">Input qualifier</h2>
+<pre><code><span class="hljs-keyword">in</span></code></pre>
+<p>The qualifier <strong>in</strong> is used to mark a parameter as read-only when a function is declared. The parameter will be passed by value to the function and the value can not be modified by the function.</p>
+<pre><code><span class="hljs-type">int</span> newFunction(<span class="hljs-keyword">in</span> <span class="hljs-type">bvec4</span> aBvec4,   <span class="hljs-comment">// read-only </span>
+                <span class="hljs-keyword">out</span> <span class="hljs-type">vec3</span> aVec3,    <span class="hljs-comment">// write-only</span>
+                <span class="hljs-keyword">inout</span> <span class="hljs-type">int</span> aInt);   <span class="hljs-comment">// read-write</span></code></pre>
+<p>The above function declaration shows the three possible parameter qualifiers. The usage of the read-only qualifier is not necessary since this is the default if no qualifier is specified.</p>
+<h2 id="output-qualifier">Output qualifier</h2>
+<pre><code><span class="hljs-keyword">out</span></code></pre>
+<p>The qualifier <strong>out</strong> is used to mark a parameter as write-only when a function is declared. The parameter will be passed by reference to the function but it is not initialized, i.e. the value can not be read. The value can be modified by the function and the changes are preserved after the function exits.</p>
+<pre><code><span class="hljs-type">int</span> newFunction(<span class="hljs-keyword">in</span> <span class="hljs-type">bvec4</span> aBvec4,   <span class="hljs-comment">// read-only </span>
+                <span class="hljs-keyword">out</span> <span class="hljs-type">vec3</span> aVec3,    <span class="hljs-comment">// write-only</span>
+                <span class="hljs-keyword">inout</span> <span class="hljs-type">int</span> aInt);   <span class="hljs-comment">// read-write</span></code></pre>
+<p>The above function declaration shows the three possible parameter qualifiers. The usage of the read-only qualifier is not necessary since this is the default if no qualifier is specified.</p>
+<h2 id="input-output-qualifier">Input-output qualifier</h2>
+<pre><code><span class="hljs-keyword">inout</span></code></pre>
+<p>The qualifier <strong>inout</strong> is used to mark a parameter as read-write when a function is declared. The parameter will be passed by reference to the function and is initialized, i.e. the value can be read. The value can be modified by the function and the changes are preserved after the function exits.</p>
+<pre><code><span class="hljs-type">int</span> newFunction(<span class="hljs-keyword">in</span> <span class="hljs-type">bvec4</span> aBvec4,   <span class="hljs-comment">// read-only </span>
+                <span class="hljs-keyword">out</span> <span class="hljs-type">vec3</span> aVec3,    <span class="hljs-comment">// write-only</span>
+                <span class="hljs-keyword">inout</span> <span class="hljs-type">int</span> aInt);   <span class="hljs-comment">// read-write</span></code></pre>
+<p>The above function declaration shows the three possible parameter qualifiers. The usage of the read-only qualifier is not necessary since this is the default if no qualifier is specified.</p>
+	</div>
+</body>
+</html>

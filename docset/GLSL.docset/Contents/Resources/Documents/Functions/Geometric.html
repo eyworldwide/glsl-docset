@@ -1,0 +1,63 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="geometric-functions">GEOMETRIC FUNCTIONS</h1>
+<h2 id="length">Length</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">length</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">length</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">length</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">length</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>length</strong> function returns the length of a vector defined by the Euclidean norm, i.e. the square root of the sum of the squared components. The input parameter can be a floating scalar or a float vector. In case of a floating scalar the length function is trivial and returns the absolute value.</p>
+<h2 id="distance">Distance</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">distance</span>(<span class="hljs-type">float</span> p0, <span class="hljs-type">float</span> p1)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">distance</span>(<span class="hljs-type">vec2</span> p0, <span class="hljs-type">vec2</span> p1)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">distance</span>(<span class="hljs-type">vec3</span> p0, <span class="hljs-type">vec3</span> p1)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">distance</span>(<span class="hljs-type">vec4</span> p0, <span class="hljs-type">vec4</span> p1)</code></pre>
+<p>The <strong>distance</strong> function returns the distance between two points. The distance of two points is the length of the vector d = p0 - p1, that starts at p1 and points to p0. The input parameters can be floating scalars or float vectors. In case of floating scalars the distance function is trivial and returns the absolute value of d.</p>
+<h2 id="dot-product">Dot product</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">dot</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">dot</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">dot</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">float</span> <span class="hljs-built_in">dot</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)</code></pre>
+<p>The <strong>dot</strong> function returns the dot product of the two input parameters, i.e. the sum of the component-wise products. If x and y are the same the square root of the dot product is equivalent to the length of the vector. The input parameters can be floating scalars or float vectors. In case of floating scalars the dot function is trivial and returns the product of x and y.</p>
+<h2 id="cross-product">Cross product</h2>
+<pre><code><span class="hljs-type">vec3</span> <span class="hljs-built_in">cross</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)</code></pre>
+<p>The <strong>cross</strong> function returns the cross product of the two input parameters, i.e. a vector that is perpendicular to the plane containing x and y and has a magnitude that is equal to the area of the parallelogram that x and y span. The input parameters can only be 3-component floating vectors. The cross product is equivalent to the product of the length of the vectors times the sinus of the(smaller) angle between x and y.</p>
+<h2 id="normalize">Normalize</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">normalize</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">normalize</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">normalize</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">normalize</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>normalize</strong> function returns a vector with length 1.0 that is parallel to x, i.e. x divided by its length. The input parameter can be a floating scalar or a float vector. In case of a floating scalar the normalize function is trivial and returns 1.0.</p>
+<h2 id="faceforward">Faceforward</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">faceforward</span>(<span class="hljs-type">float</span> N, <span class="hljs-type">float</span> I, <span class="hljs-type">float</span> Nref)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">faceforward</span>(<span class="hljs-type">vec2</span> N, <span class="hljs-type">vec2</span> I, <span class="hljs-type">vec2</span> Nref)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">faceforward</span>(<span class="hljs-type">vec3</span> N, <span class="hljs-type">vec3</span> I, <span class="hljs-type">vec3</span> Nref)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">faceforward</span>(<span class="hljs-type">vec4</span> N, <span class="hljs-type">vec4</span> I, <span class="hljs-type">vec4</span> Nref)</code></pre>
+<p>The <strong>faceforward</strong> function returns a vector that points in the same direction as a reference vector. The function has three input parameters of the type floating scalar or float vector: N, the vector to orient, I, the incident vector, and Nref, the reference vector. If the dot product of I and Nref is smaller than zero the return value is N. Otherwise -N is returned.</p>
+<h2 id="reflect">Reflect</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">reflect</span>(<span class="hljs-type">float</span> I, <span class="hljs-type">float</span> N)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">reflect</span>(<span class="hljs-type">vec2</span> I, <span class="hljs-type">vec2</span> N)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">reflect</span>(<span class="hljs-type">vec3</span> I, <span class="hljs-type">vec3</span> N)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">reflect</span>(<span class="hljs-type">vec4</span> I, <span class="hljs-type">vec4</span> N)</code></pre>
+<p>The <strong>reflect</strong> function returns a vector that points in the direction of reflection. The function has two input parameters of the type floating scalar or float vector: I, the incident vector, and N, the normal vector of the reflecting surface.</p>
+<p>Side note: To obtain the desired result the vector N has to be normalized. The reflection vector always has the same length as the incident vector. From this it follows that the reflection vector is normalized if N and I are both normalized.</p>
+<h2 id="refract">Refract</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">refract</span>(<span class="hljs-type">float</span> I, <span class="hljs-type">float</span> N, <span class="hljs-type">float</span> eta)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">refract</span>(<span class="hljs-type">vec2</span> I, <span class="hljs-type">vec2</span> N, <span class="hljs-type">float</span> eta)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">refract</span>(<span class="hljs-type">vec3</span> I, <span class="hljs-type">vec3</span> N, <span class="hljs-type">float</span> eta)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">refract</span>(<span class="hljs-type">vec4</span> I, <span class="hljs-type">vec4</span> N, <span class="hljs-type">float</span> eta)</code></pre>
+<p>The <strong>refract</strong> function returns a vector that points in the direction of refraction. The function has two input parameters of the type floating scalar or float vector and one input parameter of the type floating scalar: I, the incident vector, N, the normal vector of the refracting surface, and eta, the ratio of indices of refraction.</p>
+<p>Side note: To obtain the desired result the vectors I and N have to be normalized.</p>
+	</div>
+</body>
+</html>

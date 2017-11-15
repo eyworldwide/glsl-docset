@@ -1,0 +1,24 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="texture-types">TEXTURE TYPES</h1>
+<h2 id="2d-texture">2D texture</h2>
+<pre><code><span class="hljs-keyword">uniform</span> <span class="hljs-type">sampler2D</span> <span class="hljs-built_in">texture</span>;</code></pre>
+<p>The data type <strong>sampler2D</strong> is used to provide access to a 2D texture. It can only be declared as a uniform variable since it is a reference to data that has been loaded to a texture unit.</p>
+<p>Side note: On iOS devices this data type can only be used in the fragment shader since they don't have texture image units that can be accessed by the vertex shader.</p>
+<h2 id="cubemap-texture">Cubemap texture</h2>
+<pre><code><span class="hljs-keyword">uniform</span> <span class="hljs-type">samplerCube</span> <span class="hljs-built_in">texture</span>;</code></pre>
+<p>The data type <strong>samplerCube</strong> is used to provide access to a cubemap texture. It can only be declared as a uniform variable since it is a reference to data that has been loaded to a texture unit.</p>
+<p>Side note: On iOS devices this data type can only be used in the fragment shader since they don't have texture image units that can be accessed by the vertex shader.</p>
+	</div>
+</body>
+</html>

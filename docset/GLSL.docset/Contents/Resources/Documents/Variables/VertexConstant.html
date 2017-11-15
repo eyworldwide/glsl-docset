@@ -1,0 +1,33 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="built-in-constants-vertex-shader">BUILT-IN CONSTANTS (VERTEX-SHADER)</h1>
+<p>The following constants can be read by the vertex shader to determine the limitations of the OpenGL ES 2.0 environment at runtime.</p>
+<h2 id="number-of-vertex-attributes">Number of vertex attributes</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxVertexAttribs</span> &gt;= <span class="hljs-number">8</span></code></pre>
+<p>The built-in constant <strong>gl_MaxVertexAttribs</strong> provides the maximum number of attributes that can be used by the vertex shader. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 8.</p>
+<h2 id="number-of-vertex-uniform-vectors">Number of vertex uniform vectors</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxVertexUniformVectors</span> &gt;= <span class="hljs-number">128</span></code></pre>
+<p>The built-in constant <strong>gl_MaxVertexUniformVectors</strong> provides the maximum number of uniform vectors that can be used by the vertex shader. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 128.</p>
+<h2 id="number-of-varying-vectors">Number of varying vectors</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxVaryingVectors</span> &gt;= <span class="hljs-number">8</span></code></pre>
+<p>The built-in constant <strong>gl_MaxVaryingVectors</strong> provides the maximum number of varying vectors that can be used by the vertex shader to hand over data to the fragment shader. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 8.</p>
+<h2 id="number-of-texture-units">Number of texture units</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxVertexTextureImageUnits</span> &gt;= <span class="hljs-number">0</span></code></pre>
+<p>The built-in constant <strong>gl_MaxVertexTextureImageUnits</strong> provides the maximum number of texture units that can be used by the vertex shader. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 0.</p>
+<p>Side note: This number is actually 0 on all iOS devices. This is the reason why there is no access to textures data in the vertex shader.</p>
+<h2 id="number-of-combined-texture-units">Number of combined texture units</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxCombinedTextureImageUnits</span> &gt;= <span class="hljs-number">8</span></code></pre>
+<p>The built-in constant <strong>gl_MaxCombinedTextureImageUnits</strong> provides the maximum number of texture units that are available in the vertex shader or the fragment shader respectivley. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 8.</p>
+	</div>
+</body>
+</html>

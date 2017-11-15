@@ -1,0 +1,85 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="vector-relational-functions">VECTOR RELATIONAL FUNCTIONS</h1>
+<h2 id="less-than-comparison">Less than comparison</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">lessThan</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">lessThan</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)    
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">lessThan</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)  
+
+<span class="hljs-type">bvec2</span> <span class="hljs-built_in">lessThan</span>(<span class="hljs-type">ivec2</span> x, <span class="hljs-type">ivec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">lessThan</span>(<span class="hljs-type">ivec3</span> x, <span class="hljs-type">ivec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">lessThan</span>(<span class="hljs-type">ivec4</span> x, <span class="hljs-type">ivec4</span> y)</code></pre>
+<p>The <strong>lessThan</strong> function returns a boolean vector as result of a component-wise comparison in the form of x[i] &lt; y[i]. The function has two input parameters of the type floating point vector or signed integer vector.</p>
+<h2 id="less-than-or-equal-comparison">Less than or equal comparison</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">lessThanEqual</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">lessThanEqual</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">lessThanEqual</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)  
+
+<span class="hljs-type">bvec2</span> <span class="hljs-built_in">lessThanEqual</span>(<span class="hljs-type">ivec2</span> x, <span class="hljs-type">ivec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">lessThanEqual</span>(<span class="hljs-type">ivec3</span> x, <span class="hljs-type">ivec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">lessThanEqual</span>(<span class="hljs-type">ivec4</span> x, <span class="hljs-type">ivec4</span> y)</code></pre>
+<p>The <strong>lessThanEqual</strong> function returns a boolean vector as result of a component-wise comparison in the form of x[i] &lt;= data-preserve-html-node="true" y[i]. The function has two input parameters of the type floating point vector or signed integer vector.</p>
+<h2 id="greater-than-comparison">Greater than comparison</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">greaterThan</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">greaterThan</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">greaterThan</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)  
+
+<span class="hljs-type">bvec2</span> <span class="hljs-built_in">greaterThan</span>(<span class="hljs-type">ivec2</span> x, <span class="hljs-type">ivec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">greaterThan</span>(<span class="hljs-type">ivec3</span> x, <span class="hljs-type">ivec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">greaterThan</span>(<span class="hljs-type">ivec4</span> x, <span class="hljs-type">ivec4</span> y)</code></pre>
+<p>The <strong>greaterThan</strong> function returns a boolean vector as result of a component-wise comparison in the form of x[i] &gt; y[i]. The function has two input parameters of the type floating point vector or signed integer vector.</p>
+<h2 id="greater-than-or-equal-comparison">Greater than or equal comparison</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">greaterThanEqual</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">greaterThanEqual</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">greaterThanEqual</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)  
+
+<span class="hljs-type">bvec2</span> <span class="hljs-built_in">greaterThanEqual</span>(<span class="hljs-type">ivec2</span> x, <span class="hljs-type">ivec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">greaterThanEqual</span>(<span class="hljs-type">ivec3</span> x, <span class="hljs-type">ivec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">greaterThanEqual</span>(<span class="hljs-type">ivec4</span> x, <span class="hljs-type">ivec4</span> y)</code></pre>
+<p>The <strong>greaterThanEqual</strong> function returns a boolean vector as result of a component-wise comparison in the form of x[i] &gt;= y[i]. The function has two input parameters of the type floating point vector or signed integer vector.</p>
+<h2 id="equal-comparison">Equal comparison</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">equal</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">equal</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">equal</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)  
+
+<span class="hljs-type">bvec2</span> <span class="hljs-built_in">equal</span>(<span class="hljs-type">ivec2</span> x, <span class="hljs-type">ivec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">equal</span>(<span class="hljs-type">ivec3</span> x, <span class="hljs-type">ivec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">equal</span>(<span class="hljs-type">ivec4</span> x, <span class="hljs-type">ivec4</span> y)</code></pre>
+<p>The <strong>equal</strong> function returns a boolean vector as result of a component-wise comparison in the form of x[i] = y[i]. The function has two input parameters of the type floating point vector or signed integer vector.</p>
+<h2 id="not-equal-comparison">Not equal comparison</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">notEqual</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">notEqual</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">notEqual</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)  
+
+<span class="hljs-type">bvec2</span> <span class="hljs-built_in">notEqual</span>(<span class="hljs-type">ivec2</span> x, <span class="hljs-type">ivec2</span> y)  
+<span class="hljs-type">bvec3</span> <span class="hljs-built_in">notEqual</span>(<span class="hljs-type">ivec3</span> x, <span class="hljs-type">ivec3</span> y)  
+<span class="hljs-type">bvec4</span> <span class="hljs-built_in">notEqual</span>(<span class="hljs-type">ivec4</span> x, <span class="hljs-type">ivec4</span> y)</code></pre>
+<p>The <strong>notEqual</strong> function returns a boolean vector as result of a component-wise comparison in the form of x[i] != y[i]. The function has two input parameters of the type floating point vector or signed integer vector.</p>
+<h2 id="any-evaluation">Any evaluation</h2>
+<pre><code><span class="hljs-type">bool</span> <span class="hljs-built_in">any</span>(<span class="hljs-type">bvec2</span> x)  
+<span class="hljs-type">bool</span> <span class="hljs-built_in">any</span>(<span class="hljs-type">bvec3</span> x)  
+<span class="hljs-type">bool</span> <span class="hljs-built_in">any</span>(<span class="hljs-type">bvec4</span> x)</code></pre>
+<p>The <strong>any</strong> function returns a boolean value as result of the evaluation whether any component of the input vector is TRUE. The function has one input parameters of the type boolean vector.</p>
+<h2 id="all-evaluation">All evaluation</h2>
+<pre><code><span class="hljs-type">bool</span> <span class="hljs-built_in">all</span>(<span class="hljs-type">bvec2</span> x)  
+<span class="hljs-type">bool</span> <span class="hljs-built_in">all</span>(<span class="hljs-type">bvec3</span> x)  
+<span class="hljs-type">bool</span> <span class="hljs-built_in">all</span>(<span class="hljs-type">bvec4</span> x)</code></pre>
+<p>The <strong>all</strong> function returns a boolean value as result of the evaluation whether all components of the input vector are TRUE. The function has one input parameters of the type boolean vector.</p>
+<h2 id="not-evaluation">Not evaluation</h2>
+<pre><code><span class="hljs-type">bvec2</span> <span class="hljs-built_in">not</span>(<span class="hljs-type">bvec2</span> x)  
+ <span class="hljs-type">bvec3</span> <span class="hljs-built_in">not</span>(<span class="hljs-type">bvec3</span> x)  
+ <span class="hljs-type">bvec4</span> <span class="hljs-built_in">not</span>(<span class="hljs-type">bvec4</span> x)</code></pre>
+<p>The <strong>not</strong> function returns a boolean vector as result of a component-wise logical complement operation. The function has one input parameters of the type boolean vector.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="loops">LOOPS</h1>
+<h2 id="for-loop">For loop</h2>
+<pre><code><span class="hljs-function"><span class="hljs-title">for</span><span class="hljs-params">(;;)</span></span> {}</code></pre>
+<p>The keyword <strong>for</strong> is used to describe a loop that is controlled by a counter. The parentheses enclose three expressions that initialize, check and update the variable used as counter. The body defined by curly braces encloses the statements that are executed at each pass of the loop.</p>
+<pre><code><span class="hljs-keyword">for</span>(int <span class="hljs-built_in">i</span> = <span class="hljs-number">0</span>; <span class="hljs-built_in">i</span> &lt;= <span class="hljs-number">99</span>; <span class="hljs-built_in">i</span>++) { aFunction(); }</code></pre>
+<p>The execution of a single pass or the whole loop can be aborted by using a continue or a break statement respectively.</p>
+<h2 id="while-loop">While loop</h2>
+<pre><code><span class="hljs-function"><span class="hljs-title">while</span><span class="hljs-params">()</span></span> {}</code></pre>
+<p>The keyword <strong>while</strong> is used to describe a loop that is controlled by a condition. The parentheses enclose the expression that defines the condition. The body defined by curly braces encloses the statements that are executed at each pass of the loop.</p>
+<pre><code><span class="hljs-selector-tag">while</span>(i &lt;= <span class="hljs-number">99</span>) { <span class="hljs-selector-tag">aFunction</span>(); }</code></pre>
+<p>The execution of a single pass or the whole loop can be aborted by using a continue or a break statement respectively.</p>
+<h2 id="do-while-loop">Do-while loop</h2>
+<pre><code><span class="hljs-keyword">do</span> {} <span class="hljs-keyword">while</span><span class="hljs-comment">()</span>;</code></pre>
+<p>The keyword <strong>do</strong> is used in combination with <strong>while</strong> to describe a loop that is controlled by a condition. The body defined by curly braces encloses the statements that are executed at each pass of the loop. The parentheses enclose the expression that defines the condition.</p>
+<pre><code><span class="hljs-keyword">do</span> { aFunction(); } <span class="hljs-keyword">while</span>(i &lt;= <span class="hljs-number">99</span>);</code></pre>
+<p>The execution of a single pass or the whole loop can be aborted by using a continue or a break statement respectively.</p>
+<p>In contrast to a simple while loop the body is always executed at least one time even if the expression evaluates to false from the beginning.</p>
+<h2 id="abort-a-single-pass-of-a-loop">Abort a single pass of a loop</h2>
+<pre><code><span class="hljs-keyword">continue</span>;</code></pre>
+<p>The keyword <strong>continue</strong> is used inside the body of a loop to abort a single pass of the loop. All statements in the body after the continue statement are ignored and the next iteration of the loop is executed immediately.</p>
+<h2 id="abort-a-loop">Abort a loop</h2>
+<pre><code><span class="hljs-keyword">break</span>;</code></pre>
+<p>The keyword <strong>break</strong> is used inside the body of a loop to abort the whole loop. All statements in the body after the break statement are ignored and the loop is exited without executing any further iteration.</p>
+	</div>
+</body>
+</html>

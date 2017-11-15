@@ -1,0 +1,126 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="common-functions">COMMON FUNCTIONS</h1>
+<h2 id="absolute-value">Absolute value</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">abs</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">abs</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">abs</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">abs</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>abs</strong> function returns the absolute value of x, i.e. x when x is positive or zero and -x for negative x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="sign">Sign</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">sign</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">sign</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">sign</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">sign</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>sign</strong> function returns 1.0 when x is positive, 0.0 when x is zero and -1.0 when x is negative. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="floor">Floor</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">floor</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">floor</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">floor</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">floor</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>floor</strong> function returns the largest integer number that is smaller or equal to x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<p>Side note: The return value is of type floating scalar or float vector although the result of the operation is an integer.</p>
+<h2 id="ceiling">Ceiling</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">ceil</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">ceil</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">ceil</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">ceil</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>ceiling</strong> function returns the smallest number that is larger or equal to x. The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<p>Side note: The return value is of type floating scalar or float vector although the result of the operation is an integer.</p>
+<h2 id="fractional-part">Fractional part</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">fract</span>(<span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">fract</span>(<span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">fract</span>(<span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">fract</span>(<span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>fract</strong> function returns the fractional part of x, i.e. x minus floor(x). The input parameter can be a floating scalar or a float vector. In case of a float vector the operation is done component-wise.</p>
+<h2 id="modulo">Modulo</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)</code></pre>
+<p>The <strong>mod</strong> function returns x minus the product of y and floor(x/y). The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<p>Side note: If x and y are integers the return value is the remainder of the division of x by y as expected.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">mod</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">float</span> y)</code></pre>
+<p>There is also a variation of the <strong>mod</strong> function where the second parameter is always a floating scalar.</p>
+<h2 id="minimum">Minimum</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)</code></pre>
+<p>The <strong>min</strong> function returns the smaller of the two arguments. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">min</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">float</span> y)</code></pre>
+<p>There is also a variation of the <strong>min</strong> function where the second parameter is always a floating scalar.</p>
+<h2 id="maximum">Maximum</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y)</code></pre>
+<p>The <strong>max</strong> function returns the larger of the two arguments. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">float</span> y)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">max</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">float</span> y)</code></pre>
+<p>There is also a variation of the <strong>max</strong> function where the second parameter is always a floating scalar.</p>
+<h2 id="clamp">Clamp</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> minVal, <span class="hljs-type">float</span> maxVal)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> minVal, <span class="hljs-type">vec2</span> maxVal)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> minVal, <span class="hljs-type">vec3</span> maxVal)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> minVal, <span class="hljs-type">vec4</span> maxVal)</code></pre>
+<p>The <strong>clamp</strong> function returns x if it is larger than minVal and smaller than maxVal. In case x is smaller than minVal, minVal is returned. If x is larger than maxVal, maxVal is returned. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> minVal, <span class="hljs-type">float</span> maxVal)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">float</span> minVal, <span class="hljs-type">float</span> maxVal)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">float</span> minVal, <span class="hljs-type">float</span> maxVal)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">clamp</span>(<span class="hljs-type">vec4</span> x, flfloat minVal, <span class="hljs-type">float</span> maxVal)</code></pre>
+<p>There is also a variation of the <strong>clamp</strong> function where the second and third parameters are always a floating scalars.</p>
+<h2 id="mix">Mix</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y, <span class="hljs-type">float</span> a)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y, <span class="hljs-type">vec2</span> a)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y, <span class="hljs-type">vec3</span> a)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y, <span class="hljs-type">vec4</span> a)</code></pre>
+<p>The <strong>mix</strong> function returns the linear blend of x and y, i.e. the product of x and (1 - a) plus the product of y and a. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">float</span> x, <span class="hljs-type">float</span> y, <span class="hljs-type">float</span> a)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">vec2</span> x, <span class="hljs-type">vec2</span> y, <span class="hljs-type">float</span> a)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">vec3</span> x, <span class="hljs-type">vec3</span> y, <span class="hljs-type">float</span> a)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">mix</span>(<span class="hljs-type">vec4</span> x, <span class="hljs-type">vec4</span> y, <span class="hljs-type">float</span> a)</code></pre>
+<p>There is also a variation of the <strong>mix</strong> function where the third parameter is always a floating scalar.</p>
+<h2 id="step">Step</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">float</span> edge, <span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">vec2</span> edge, <span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">vec3</span> edge, <span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">vec4</span> edge, <span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>step</strong> function returns 0.0 if x is smaller then edge and otherwise 1.0. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">float</span> edge, <span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">float</span> edge, <span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">float</span> edge, <span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">step</span>(<span class="hljs-type">float</span> edge, <span class="hljs-type">vec4</span> x)</code></pre>
+<p>There is also a variation of the <strong>step</strong> function where the edge parameter is always a floating scalar.</p>
+<h2 id="smoothstep">Smoothstep</h2>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">float</span> edge0, <span class="hljs-type">float</span> edge1, <span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">vec2</span> edge0, <span class="hljs-type">vec2</span> edge1, <span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">vec3</span> edge0, <span class="hljs-type">vec3</span> edge1, <span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">vec4</span> edge0, <span class="hljs-type">vec4</span> edge1, <span class="hljs-type">vec4</span> x)</code></pre>
+<p>The <strong>smoothstep</strong> function returns 0.0 if x is smaller then edge0 and 1.0 if x is larger than edge1. Otherwise the return value is interpolated between 0.0 and 1.0 using Hermite polynomials. The input parameters can be floating scalars or float vectors. In case of float vectors the operation is done component-wise.</p>
+<pre><code><span class="hljs-type">float</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">float</span> edge0, <span class="hljs-type">float</span> edge1, <span class="hljs-type">float</span> x)  
+<span class="hljs-type">vec2</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">float</span> edge0, <span class="hljs-type">float</span> edge1, <span class="hljs-type">vec2</span> x)  
+<span class="hljs-type">vec3</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">float</span> edge0, <span class="hljs-type">float</span> edge1, <span class="hljs-type">vec3</span> x)  
+<span class="hljs-type">vec4</span> <span class="hljs-built_in">smoothstep</span>(<span class="hljs-type">float</span> edge0, <span class="hljs-type">float</span> edge1, <span class="hljs-type">vec4</span> x)</code></pre>
+<p>There is also a variation of the <strong>smoothstep</strong> function where the edge0 and edge1 parameters are always floating scalars.</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="built-in-constants-fragment-shader">BUILT-IN CONSTANTS (FRAGMENT-SHADER)</h1>
+<p>The following constants can be read by the fragment shader to determine the limitations of the OpenGL ES 2.0 environment at runtime.</p>
+<h2 id="number-of-texture-units">Number of texture units</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxTextureImageUnits</span> &gt;= <span class="hljs-number">8</span></code></pre>
+<p>The built-in constant <strong>gl_MaxTextureImageUnits</strong> provides the maximum number of texture units that can be used by the fragment shader. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 8.</p>
+<h2 id="number-of-fragment-uniform-vectors">Number of fragment uniform vectors</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxFragmentUniformVectors</span> &gt;= <span class="hljs-number">16</span></code></pre>
+<p>The built-in constant <strong>gl_MaxFragmentUniformVectors</strong> provides the maximum number of uniform vectors that can be used by the fragment shader. The value of this variable is dependent on the OpenGL ES 2.0 implementation but has to be at least 16.</p>
+<h2 id="number-of-draw-buffers">Number of draw buffers</h2>
+<pre><code><span class="hljs-keyword">const</span> <span class="hljs-keyword">mediump</span> <span class="hljs-type">int</span> <span class="hljs-built_in">gl_MaxDrawBuffers</span> = <span class="hljs-number">1</span></code></pre>
+<p>The built-in constant <strong>gl_MaxDrawBuffers</strong> provides the maximum number of the available draw buffers. The value of this variable is 1 for all OpenGL ES 2.0 implementations. This might change in future versions.</p>
+	</div>
+</body>
+</html>

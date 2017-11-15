@@ -1,0 +1,39 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="scalar-types">SCALAR TYPES</h1>
+<h2 id="void">Void</h2>
+<pre><code><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">aFunction</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">bFunction</span><span class="hljs-params">(<span class="hljs-keyword">float</span>)</span></span>;</code></pre>
+<p>The data type <strong>void</strong> is used when the parameter list of a function is empty and when a function does not return a value.</p>
+<h2 id="boolean">Boolean</h2>
+<pre><code><span class="hljs-keyword">bool</span> aBool = <span class="hljs-literal">true</span>;
+<span class="hljs-keyword">bool</span> bBool = <span class="hljs-keyword">bool</span>(aInt);
+<span class="hljs-keyword">bool</span> cBool = <span class="hljs-keyword">bool</span>(aFloat);</code></pre>
+<p>The data type <strong>bool</strong> is used for boolean values (true or false).</p>
+<p>Side note: Implicit type conversions are not supported. Type conversions can be done using constructors as shown in the second and third example.</p>
+<h2 id="integer">Integer</h2>
+<pre><code><span class="hljs-attribute">int aInt</span> = 42;
+<span class="hljs-attribute">int bInt</span> = int(aBool);
+<span class="hljs-attribute">int cInt</span> = int(aFloat);</code></pre>
+<p>The data type <strong>int</strong> is used for integer values.</p>
+<p>Side note: Implicit type conversions are not supported. Type conversions can be done using constructors as shown in the second and third example.</p>
+<h2 id="floating-point">Floating point</h2>
+<pre><code><span class="hljs-attribute">float aFloat</span> = 1.0;
+<span class="hljs-attribute">float bFloat</span> = float(aBool);
+<span class="hljs-attribute">float cFloat</span> = float(aInt);</code></pre>
+<p>The data type <strong>float</strong> is used for floating point (scalar) values.</p>
+<p>Side note: Implicit type conversions are not supported. Type conversions can be done using constructors as shown in the second and third example.</p>
+	</div>
+</body>
+</html>

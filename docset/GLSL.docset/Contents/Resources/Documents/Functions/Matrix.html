@@ -1,0 +1,22 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<meta name=viewport content='width=device-width,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0' />
+		<link media="all" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.9.0/github-markdown.min.css" type="text/css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" type="text/css" media="all" />
+    <title></title>
+</head>
+<body>
+	<div class="markdown-body">
+		<h1 id="matrix-functions">MATRIX FUNCTIONS</h1>
+<h2 id="component-wise-matrix-multiplication">Component-wise matrix multiplication</h2>
+<pre><code><span class="hljs-type">mat2</span> <span class="hljs-built_in">matrixCompMult</span>(<span class="hljs-type">mat2</span> x, <span class="hljs-type">mat2</span> y)  
+<span class="hljs-type">mat3</span> <span class="hljs-built_in">matrixCompMult</span>(<span class="hljs-type">mat3</span> x, <span class="hljs-type">mat3</span> y)  
+<span class="hljs-type">mat4</span> <span class="hljs-built_in">matrixCompMult</span>(<span class="hljs-type">mat4</span> x, <span class="hljs-type">mat4</span> y)</code></pre>
+<p>The <strong>matrixCompMult</strong> function returns a matrix resulting from a component-wise multiplication. The function has two input parameters of the type floating point matrix and returns a matrix of the same type. The indices of the returned matrix are calculated as follows: z[i][j] = x[i][j] * y[i][j]</p>
+<p>Side note: This is NOT the matrix multiplication known from linear algebra. To obtain the "normal" matrix multiplication the <em>operator is used: z = x</em> y</p>
+	</div>
+</body>
+</html>
